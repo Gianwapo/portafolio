@@ -1,50 +1,187 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ejemplo de HTML y CSS</title>
+    <title>Mi Portafolio</title>
     <style>
-      /* Estilos CSS para el encabezado */
-      header {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 1rem;
-      }
-      
-      /* Estilos CSS para el contenido principal */
-      main {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 1rem;
-      }
-      
-      /* Estilos CSS para los enlaces */
-      a {
-        color: #333;
-        text-decoration: none;
-      }
-      
-      /* Estilos CSS para los botones */
-      button {
-        background-color: #333;
-        color: #fff;
-        padding: 0.5rem 1rem;
-        border: none;
-        border-radius: 0.25rem;
-        cursor: pointer;
-      }
+    /* Estilos generales */
+
+    body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    }
+
+    header {
+    background-color: #F49AC2;
+    color: #fff;
+    padding: 20px;
+
+    }
+    header img {
+    width: 400px;
+    height: 400px;
+    border-radius:50%;
+    }
+
+
+    h1, h2 {
+    margin: 0;
+    }
+
+    nav {
+    background-color: #AEC6CF;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    }
+
+    nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+
+    nav li {
+    display: inline-block;
+    margin-right: 20px;
+    }
+
+    nav a {
+    color: #333;
+    text-decoration: none;
+    }
+
+    nav a:hover {
+    color: #666;
+    }
+
+    main {
+    padding: 20px;
+    }
+
+    section {
+    margin-bottom: 40px;
+    }
+
+    ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    }
+
+    footer {
+    background-color: #CB99C9;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    }
+
+
+    /* Estilos específicos para la sección "Acerca de mí" */
+
+    #acerca-de p {
+    margin-bottom: 20px;
+    }
+
+
+    /* Estilos específicos para la sección "Portafolio" */
+
+    #portafolio li {
+    margin-bottom: 10px;
+    }
+
+    #portafolio li a {
+    color: #333;
+    }
+
+    #portafolio li a:hover {
+    color: #666;
+    }
+
+
+    /* Estilos específicos para el formulario de contacto */
+
+    form label {
+    display: block;
+    margin-bottom: 10px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    }
+
+    form input[type="submit"] {
+    background-color: #333;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    }
+
+    form input[type="submit"]:hover {
+    background-color: #666;
+    }
     </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
   </head>
   <body>
-    <header>
-      <h1>Ejemplo de HTML y CSS</h1>
+    <header>    
+      <img src="https://i.pinimg.com/564x/a4/75/ea/a475ea9dd0f1f703635551facbb91f31.jpg" alt="El tiempo nuestro mayor activo">
+      <h1>Mi Nombre</h1>
     </header>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#acerca-de">Acerca de mí</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
     <main>
-      <p>Bienvenido a mi sitio web de ejemplo.</p>
-      <p>Este es un párrafo de ejemplo. Puedes editar este párrafo para agregar tu propio contenido.</p>
-      <button>Click aquí</button>
-      <br>
-      <a href="#">Enlace de ejemplo</a>
+      <section id="inicio">
+        <h2>¡Bienvenido/a a mi portafolio!</h2>
+        <p>En este sitio podrás conocer más sobre mi trabajo y habilidades.</p>
+      </section>
+      <section id="acerca-de">
+        <h2>Acerca de mí</h2>
+        <p>¡Hola! Mi nombre es [tu nombre] y soy [tu profesión]. Me apasiona [tu área de especialización].</p>
+      </section>
+      <section id="portafolio">
+        <h2>Portafolio</h2>
+        <ul>
+          <li><a href="#">Proyecto 1</a></li>
+          <li><a href="#">Proyecto 2</a></li>
+          <li><a href="#">Proyecto 3</a></li>
+        </ul>
+      </section>
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <form action="enviar.php" method="post">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre"><br>
+
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo"><br>
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje"></textarea><br>
+
+          <input type="submit" value="Enviar">
+        </form>
+      </section>
     </main>
+    <footer>
+      <p>&copy; 2023 [Tu Nombre]. Todos los derechos reservados.</p>
+    </footer>
   </body>
 </html>
